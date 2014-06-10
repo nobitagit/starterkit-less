@@ -1,0 +1,189 @@
+/* ###### MIXINS ####### */
+
+/*
+	CUSTOM MIXINS
+*/
+.sprite {
+	background: url(../img/sprites.png) no-repeat;
+}
+
+
+/*
+	TRUNCATE TEXT IN CSS
+*/
+.truncate(@width:250px) {
+	width: @width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*
+	POSITION FIXED
+*/
+.fixed (@width:100%) {
+	width: @width;
+	position: fixed;
+	z-index: 1;
+}
+/*
+	USER SELECT
+*/
+.user-select(@arguments: none) {
+  -webkit-user-select: @arguments;
+  	 -moz-user-select: @arguments;
+  	  -ms-user-select: @arguments;
+  	      user-select: @arguments;
+}
+/*
+	GRADIENT BACKGROUND-COLOR
+*/
+.gradient(@fcolor:#000,@scolor:#333,@from:0%,@to:100%) {
+	background-color: @fcolor;
+	background: -webkit-linear-gradient(
+					@fcolor @from, 
+					@scolor @to);
+	background:-moz-linear-gradient(
+					@fcolor @from, 
+					@scolor @to);
+	background:-ms-linear-gradient(
+					@fcolor @from, 
+					@scolor @to);
+	background:-o-linear-gradient(
+					@fcolor @from, 
+					@scolor @to);
+}
+/*
+	OPACITY
+*/
+.opacity(@opacity:80) {
+  -webkit-opacity: @opacity / 100;
+  	 -moz-opacity: @opacity / 100;
+  		  opacity: @opacity / 100;
+  		  filter: ~"alpha(opacity=@{opacity})";
+}
+/*
+	BORDER-RADIUS
+*/
+.radius (@radius:5px) {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+		-ms-border-radius: @radius;
+		 -o-border-radius: @radius;
+	  		border-radius: @radius;
+}
+	/* BORDER-RADIUS TOP */
+	.radius-t (@radius:5px) {
+		-webkit-border-top-left-radius: @radius;
+		-webkit-border-top-right-radius: @radius;
+		   -moz-border-radius-topleft: @radius;
+		   -moz-border-radius-topright: @radius;
+			    border-top-left-radius: @radius;
+			    border-top-right-radius: @radius;
+	}
+	/* BORDER-RADIUS BOTTOM */
+	.radius-b (@radius:5px) {
+		-webkit-border-bottom-left-radius: @radius;
+		-webkit-border-bottom-right-radius: @radius;
+		   -moz-border-radius-bottomleft: @radius;
+		   -moz-border-radius-bottomright: @radius;
+			    border-bottom-left-radius: @radius;
+			    border-bottom-right-radius: @radius;
+	}
+/*
+	TRANSITIONS
+*/
+.transition(@arguments:none) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
+}
+/*
+	ANIMATION
+*/
+.animation(@arguments:none){
+	-webkit-animation: @arguments;
+	   -moz-animation: @arguments;
+	    -ms-animation: @arguments;
+			animation: @arguments;
+}
+/*
+	APPEARANCE
+*/
+.appearance(@arguments:button) {
+	-webkit-appearance: @arguments;
+	   -moz-appearance: @arguments;
+		 	appearance: @arguments;
+}
+/*
+	BOX-SHADOW
+*/
+.box-shadow (@x: 0; @y: 0; @blur: 1px; @color:#000) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+     	  box-shadow: @arguments;
+}
+	/* INSET BOX-SHADOW */
+	.inset-box-shadow (@x: 0; @y: 0; @blur: 1px; @color:#000) {
+	   -webkit-box-shadow: inset @arguments;
+	   	  -moz-box-shadow: inset @arguments;
+	   	       box-shadow: inset @arguments;
+	}
+/*
+	ROTATE
+*/
+.transform(@arguments:none) {
+	-webkit-transform: @arguments;
+	   -moz-transform: @arguments;
+	    -ms-transform: @arguments;
+	     -o-transform: @arguments;
+	        transform: @arguments;
+}
+/*
+	BOX-SIZING
+*/
+.box-sizing (@arguments:border-box) {
+	-webkit-box-sizing: @arguments;
+	   -moz-box-sizing: @arguments;
+		    box-sizing: @arguments;
+}
+/*
+	PERSPECTIVE
+*/
+.perspective (@arguments:150) {
+	-webkit-perspective: @arguments;
+	   -moz-perspective: @arguments;
+	 	-ms-perspective: @arguments;
+			perspective: @arguments;
+}
+/*
+	BACKFACE
+*/
+.backface(@arguments:visible) {
+	-webkit-backface-visibility: @arguments;
+	   -moz-backface-visibility: @arguments ;
+	    -ms-backface-visibility: @arguments ;
+		    backface-visibility: @arguments ;
+}
+/*
+	COLUMNS
+*/
+.columns (@arguments:3) {
+	-webkit-column-count:@arguments; 
+	   -moz-column-count:@arguments;
+	   	    column-count:@arguments;
+}
+	/* COLUMN GAP */
+	.columns-gap(@arguments:40px) {
+		-webkit-column-gap:@arguments;
+		   -moz-column-gap:@arguments;
+				column-gap:@arguments;
+	}
+	/* COLUMN RULES */
+	.columns-rule(@size:3px,@style:outset,@color:#e2e2e2) {
+		-webkit-column-rule:@size @style @color; 
+		   -moz-column-rule:@size @style @color;
+		   	    column-rule:@size @style @color;
+	}
+
+

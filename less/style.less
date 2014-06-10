@@ -1,0 +1,44 @@
+// Bash compiler:
+//
+// 1. navigate to the root of the project
+// 2. execute "node less-watch.js less css"
+// 3. enjoy
+//
+
+@import (reference) "_mixins.less";
+@import "_reset.less";
+@import "_base.less";
+@import (reference) "_grid.less";
+
+@red : #cc071e;
+@grey : #515151;
+@black : #272727;
+@bkg : #f8f6ed;
+
+img{
+  max-width: 100%;
+}
+
+html, body{
+  background: @bkg;
+}
+
+strong{
+  font-weight: bold;
+}
+
+.container{
+  &:extend(.container);
+  .cf;
+  position: relative;
+}
+
+.row{
+  &:extend(.row);
+  .cf;
+  position: relative;
+}
+
+
+
+
